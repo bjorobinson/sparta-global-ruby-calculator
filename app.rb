@@ -10,6 +10,12 @@
     case operator
     when '+'
       putsOutput add input_array[0].to_f,input_array[2].to_f
+    when '-'
+      putsOutput sub input_array[0].to_f,input_array[2].to_f
+    when '*'
+      putsOutput mult input_array[0].to_f,input_array[2].to_f
+    when '/'
+      putsOutput div input_array[0].to_f,input_array[2].to_f
     end
   end
   # Basic
@@ -18,8 +24,17 @@
       num1+num2
     end
     # subtraction
+    def sub num1,num2
+      num1-num2
+    end
     # multiplication
+    def mult num1,num2
+      num1*num2
+    end
     # division
+    def div num1,num2
+      num1/num2
+    end
   # Advanced
     # power
     # square root
