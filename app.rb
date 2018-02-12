@@ -16,6 +16,10 @@
       putsOutput mult input_array[0].to_f,input_array[2].to_f
     when '/'
       putsOutput div input_array[0].to_f,input_array[2].to_f
+    when '**'
+      putsOutput pow input_array[0].to_f,input_array[2].to_f
+    when '^'
+      putsOutput sqrt input_array[0].to_f
     end
   end
   # Basic
@@ -37,7 +41,13 @@
     end
   # Advanced
     # power
+    def pow num1,num2
+      num1**num2
+    end
     # square root
+    def sqrt num1
+      Math.sqrt num1
+    end
   # BMI Calc
   # Journey Calc
   # Output
