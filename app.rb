@@ -1,10 +1,23 @@
 # Functions
   # Input
   def getInput
-    puts 'Enter Input in the form x operator y, eg. 4 + 9:'
+    puts 'Enter Input in the form x operator y, eg. 4 + 9, or bmi or jrny:'
     gets.chomp
   end
   def whatInput input
+    if input == 'bmi'
+      puts "Enter your height(meters or inches), weight (kilograms and pounds), and number system used (met)ric or (imp)erial"
+      input = gets.chomp
+      calc = input.split
+      if calc[2]=='imp'
+        putsOutput calc[1].to_f/(pow(calc[0].to_f,2))*703
+      elsif calc[2]=='met'
+        putsOutput calc[1].to_f/(pow(calc[0].to_f,2))
+      end
+      return true
+    elsif input == 'jrny'
+      return true
+    end
     input_array = input.split
     operator = input_array[1]
     case operator
